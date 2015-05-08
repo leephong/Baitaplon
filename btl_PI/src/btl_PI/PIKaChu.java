@@ -86,7 +86,10 @@ public class PIKaChu extends JFrame {
 			}
 		});
 	}
-	 
+	
+	/**
+	 * Create the frame.
+	 */
 	
 	
 	
