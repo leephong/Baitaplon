@@ -62,6 +62,32 @@ public class PIKaChu extends JFrame {
 	
 	Random ran = new Random();
 	
+	public JPanel panel = new JPanel();
+	
+	/*  main
+	 * */
+	 
+	public static void main(String[] args)
+	{
+		EventQueue.invokeLater(new Runnable() {
+			
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				try
+				{
+					PIKaChu frame = new PIKaChu();
+					frame.setVisible(true);
+				}catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+				
+			}
+		});
+	}
+	 
+	
 	
 	
 
