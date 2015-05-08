@@ -36,7 +36,33 @@ import javax.swing.JToggleButton;
 public class PIKaChu extends JFrame {
 	
 	public JButton tieptuc;
-	public int A[] = new int [84];
-	public JButton btnimg[] = new JButton[84];
+	public int A[] = new int [72];
+	public JButton btning[] = new JButton[72];
+	
+	public JPanel contentPane ;
+	public Timer time;
+	
+	/* tao cac ứng dụng
+	 * */
+	 
+	public int flag =0;
+	public int bodem;
+	public int map=0;
+	public int lick1 ,click2;
+	public JButton b1,b2;
+	public Border slBorder = new LineBorder(Color.red , 3);
+	public static int gamemap =0;
+	public JMenuItem mntmNewGame = new JMenuItem("new Game");
+	public int newgame =0;
+	public long score =0;
+	
+	public JLabel scorelabel = new JLabel("Score = "+score);
+	public JLabel timelabel = new JLabel("Time = "+bodem);
+	public JLabel maplabel = new JLabel("Map"+score);
+	
+	Random ran = new Random();
+	
+	
+	
 
 }
