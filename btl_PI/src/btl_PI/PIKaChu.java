@@ -101,5 +101,5 @@ public class PIKaChu extends JFrame {
 	// test thử dfldgjldkfgjkdkfgj
 	//dfklgdlkgkdldkgj
 	//dskfhdgdfgdklgj
-
+//hfhdgdggg
 }
