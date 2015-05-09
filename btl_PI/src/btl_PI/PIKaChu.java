@@ -41,13 +41,5 @@ public class PIKaChu extends JFrame {
 	
 	
 	
-	//jhkjhkjhjkhj
-	
-	///kjjkhkjhkh
-	
-	
-	
-	
-	//jkhkjhkjhkjhkj
-
+	// adadadajdlkasjdka
 }
