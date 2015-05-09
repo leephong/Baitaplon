@@ -91,7 +91,13 @@ public class PIKaChu extends JFrame {
 	 * Create the frame.
 	 */
 	
-	
+	public PIKaChu()
+	{
+		setResizable(true);
+		setTitle("PiKaChu");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+	}
 	
 
 }
