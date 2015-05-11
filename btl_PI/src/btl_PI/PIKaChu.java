@@ -96,6 +96,7 @@ public class PIKaChu extends JFrame {
 		setResizable(true);
 		setTitle("PiKaChu");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//amdahdasndashhasnsanal
 		
 	}
 	//fsdaggfasfesfsfafsafase
