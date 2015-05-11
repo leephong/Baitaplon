@@ -38,7 +38,7 @@ public class PIKaChu extends JFrame {
 	public JButton tieptuc;
 	public int A[] = new int [84];
 	public JButton btnimg[] = new JButton[84];
-	
+	//uth66yg5ygt5vgrvgrrggrvrvrvrgrvg
 	
 	
 	// adadahlylkhggg
