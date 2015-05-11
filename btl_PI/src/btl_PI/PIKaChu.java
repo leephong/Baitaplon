@@ -100,4 +100,5 @@ public class PIKaChu extends JFrame {
 	}
 	//lhgfxdvxvdvvxv
 	//sfsfgdagvagva
+	//pouh;'u;iyfg;utglh
 }
