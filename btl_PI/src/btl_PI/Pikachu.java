@@ -22,4 +22,23 @@ public class Pikachu {
 		}
 		this.score = 0;
 	}
+	/*
+	 * Phuong thuc lay Score Diem = Diem hien tai + 500 + 10*count
+	 */
+	public int getNewScore(int count) {
+		this.score += (500 + 10 * count);
+		return this.score;
+	}
+   /*
+    * Phuong thuc lay diem
+    */
+	public int getScore() {
+		return this.score;
+	}
+	/*
+	 * Phuong thuc tra ve ma tran pikachu
+	 */
+	public int[][] getPikachu() {
+		return this.pikachu;
+	}
 }
