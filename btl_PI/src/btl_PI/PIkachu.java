@@ -74,8 +74,6 @@ public class PIkachu extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	
-	
 	public PIkachu() 
 	{
 		
@@ -106,8 +104,8 @@ public class PIkachu extends JFrame {
 					
 				if(e.getSource()==huongdan)
 				{ 
-					JOptionPane.showMessageDialog(null,"Nhiá»‡m vá»¥ cá»§a báº¡n ráº¥t Ä‘Æ¡n giáº£n ,chá»‰ cáº§n tÃ¬m hai hÃ¬nh giá»‘ng nhau "
-							+ "vÃ  Ä‘Æ°á»�ng ná»‘i giá»¯a chÃºng gáº¥p khÃºc khÃ´ng quÃ¡ 2 láº§n,clich vÃ o Ä‘á»ƒ loáº¡i bá»� chÃºng ");
+					JOptionPane.showMessageDialog(null,"Nhiệm vụ của bạn rất đơn giản ,chỉ cần tìm hai hình giống nhau "
+							+ "và đường nối giữa chúng gấp khúc không quá 2 lần,clich vào để loại bỏ chúng ");
 				}
 			}
 		});
