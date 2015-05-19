@@ -79,12 +79,9 @@ public class PIkachu extends JFrame {
 		
 		setResizable(true);
 		setTitle("PIkachu");
-		//setSize(50000, 50000);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 100, 900, 600);//vi tri va thay doi kich thuoc
 		contentPane = new ImagePanel(new ImageIcon("images\\bg.jpg").getImage());
-		//contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		
 		setContentPane(contentPane);
 		
 		contentPane.setLayout(null);
@@ -104,8 +101,8 @@ public class PIkachu extends JFrame {
 					
 				if(e.getSource()==huongdan)
 				{ 
-					JOptionPane.showMessageDialog(null,"Nhiá»‡m vá»¥ cá»§a báº¡n ráº¥t Ä‘Æ¡n giáº£n ,chá»‰ cáº§n tÃ¬m hai hÃ¬nh giá»‘ng nhau "
-							+ "vÃ  Ä‘Æ°á»�ng ná»‘i giá»¯a chÃºng gáº¥p khÃºc khÃ´ng quÃ¡ 2 láº§n,clich vÃ o Ä‘á»ƒ loáº¡i bá»� chÃºng ");
+					JOptionPane.showMessageDialog(null,"Nhiệm vụ của bạn rất đơn giản ,chỉ cần tìm hai hình giống nhau "
+							+ "và đường nối giữa chúng gấp khúc không quá 2 lần,clich vào để loại bỏ chúng ");
 				}
 			}
 		});
