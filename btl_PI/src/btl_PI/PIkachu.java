@@ -179,6 +179,7 @@ public class PIkachu extends JFrame {
 			}//dung ham for
 			
 				//binh commit len
+			//
 		}
 
 	});
