@@ -104,8 +104,8 @@ public class PIkachu extends JFrame {
 					
 				if(e.getSource()==huongdan)
 				{ 
-					JOptionPane.showMessageDialog(null,"Nhiệm vụ của bạn rất đơn giản ,chỉ cần tìm hai hình giống nhau "
-							+ "và đường nối giữa chúng gấp khúc không quá 2 lần,clich vào để loại bỏ chúng ");
+					JOptionPane.showMessageDialog(null,"Nhiá»‡m vá»¥ cá»§a báº¡n ráº¥t Ä‘Æ¡n giáº£n ,chá»‰ cáº§n tÃ¬m hai hÃ¬nh giá»‘ng nhau "
+							+ "vÃ  Ä‘Æ°á»�ng ná»‘i giá»¯a chÃºng gáº¥p khÃºc khÃ´ng quÃ¡ 2 láº§n,clich vÃ o Ä‘á»ƒ loáº¡i bá»� chÃºng ");
 				}
 			}
 		});
@@ -160,9 +160,28 @@ public class PIkachu extends JFrame {
 				contentPane.add(maplabel);
 				maplabel.setForeground(Color.RED);
 				
-				//dung ham for
-			}
-			//dÃ¹ng hÃ m for
+				for(int i = 0; i <120; i++) 
+				{				
+					btning[i]= new JButton(); 
+					for(int j = 0;j<36 ;j++)
+					{
+						String namehinh = "images//h";
+						String b = null;
+						b = b.valueOf(j);
+						namehinh = namehinh.concat(b);
+						namehinh = namehinh.concat(".jpg");
+						if(A[i] ==j)btning[i].setIcon(new  ImageIcon(namehinh));
+					}
+
+					
+					panel.add(btning[i]);
+					btning[i].addActionListener(this);
+
+				}panel.validate();
+				
+			}//dung ham for
+			
+			//dÃƒÂ¹ng hÃƒÂ m for
 	
 		}
 
