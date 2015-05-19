@@ -80,14 +80,14 @@ public class PIkachu extends JFrame {
 		setResizable(true);
 		setTitle("PIkachu");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(200, 100, 900, 600);//vi tri va thay doi kich thuoc
+		setBounds(100, 80, 1024, 640);//vi tri va thay doi kich thuoc
 		contentPane = new ImagePanel(new ImageIcon("images\\bg.jpg").getImage());
 		setContentPane(contentPane);
 		
 		contentPane.setLayout(null);
 		
 		JMenuBar menuBar = new JMenuBar();
-		menuBar.setBounds(0, 0, 800, 20);
+		menuBar.setBounds(0, 0, 1024, 20);
 		contentPane.add(menuBar);
 		
 		JMenu mnFile = new JMenu("File");
@@ -120,7 +120,7 @@ public class PIkachu extends JFrame {
 				map = 0;
 				scorelabel.setText("Score = "+score);
 				maplabel.setText("Map = "+(map+1));
-				bodem = 150;
+				bodem = 500;
 				//checkRandom();
 				panel.removeAll();
 				gamemap = 0;
@@ -140,9 +140,9 @@ public class PIkachu extends JFrame {
 				time = new Timer(1000, aTime);
 				time.start();
 				
-				panel.setBounds(100, 100, 530,390);
+				panel.setBounds(100, 50, 795,520);
 				contentPane.add(panel);
-				panel.setLayout(new GridLayout(6, 6, 0, 0));
+				panel.setLayout(new GridLayout(8, 15, 0, 0));
 				panel.setOpaque(false);
 				
 				scorelabel.setBounds(10, 32, 98, 14);
@@ -178,8 +178,7 @@ public class PIkachu extends JFrame {
 				
 			}//dung ham for
 			
-				//binh commit len
-			//
+
 		}
 
 	});
