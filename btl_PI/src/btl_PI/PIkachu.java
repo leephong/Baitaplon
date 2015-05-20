@@ -27,10 +27,6 @@ import javax.swing.JMenuItem;
 import javax.swing.JMenuBar;
 import javax.swing.JOptionPane;
 
-
-
-
-
 import java.util.Random;
 import java.awt.Color;
 
@@ -40,13 +36,18 @@ import javax.swing.JToggleButton;
 
 
 
+@SuppressWarnings({ "serial", "unused" })
 public class PIkachu extends JFrame {
 	
 	
 	public JButton tieptuc;
 	
+
 	public int[][] A;
 	public JButton btning[][] = new JButton[8][15];
+	// tao ra 120 button tuong ung voi 120 pikachu
+	
+
 	
 	public JPanel contentPane;
 	public Timer time;
@@ -110,6 +111,7 @@ public class PIkachu extends JFrame {
 				}
 			}
 		});
+		
 		mnhuongdan.add(huongdan);
 
 		mntmNewGame.addActionListener(new ActionListener()
