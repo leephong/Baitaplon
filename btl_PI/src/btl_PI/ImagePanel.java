@@ -8,10 +8,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 public class ImagePanel extends JPanel {
-
-	public ImagePanel(Image image) {
-		private Image img;
-
+	private Image img;
 		public ImagePanel(String img) {
 		this ( new ImageIcon(img).getImage());
 		}
@@ -32,4 +29,4 @@ public class ImagePanel extends JPanel {
 
 	}
 
-}
+
