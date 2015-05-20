@@ -42,12 +42,9 @@ public class PIkachu extends JFrame {
 	
 	public JButton tieptuc;
 	
-
 	public int[][] A;
 	public JButton btning[][] = new JButton[8][15];
 	// tao ra 120 button tuong ung voi 120 pikachu
-	
-
 	
 	public JPanel contentPane;
 	public Timer time;
@@ -70,9 +67,7 @@ public class PIkachu extends JFrame {
 	public JLabel maplabel = new JLabel("Map = "+score);
 	
 	Random ran = new Random();
-	
-	
-	
+
 	public JPanel panel = new JPanel();
 
 
@@ -145,7 +140,6 @@ public class PIkachu extends JFrame {
 				    };
 				time = new Timer(1000, aTime);
 				time.start();
-				
 				panel.setBounds(100, 50, 795,520);
 				contentPane.add(panel);
 				panel.setLayout(new GridLayout(8, 15, 0, 0));
@@ -186,8 +180,6 @@ public class PIkachu extends JFrame {
 			}
 	// thuat toan tim duong  		
 
-		
-	
 	});
 		 mnFile.add(mntmNewGame);
 		//ket thuc ham action
@@ -199,8 +191,6 @@ public class PIkachu extends JFrame {
 		});
 		
 		mnFile.add(mntmExitGame);
-		
 	}
 	
-
 	}
