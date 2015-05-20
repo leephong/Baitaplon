@@ -194,4 +194,60 @@ public class PIkachu extends JFrame {
 		mnFile.add(mntmExitGame);
 		
 	}
+	
+	public void checkRandom()
+	{
+		//check random
+		
+		for(int i = 0; i < 120;i++)
+		{
+			int r = ran.nextInt(35);
+			A[i] = r;
+			
+		}
+		
+		for(int i = 0; i < 36; i++)
+		{
+				
+			if(DemPT(i) % 2 != 0)
+			{
+				Chuyen(i);
+					
+					
+			}	
+		}
+	}
+	
+	
+	
+	
+
+	public int DemPT(int m)
+	{
+		int d=0;
+		for(int i=0;i<120;i++)
+		{
+			if(m == A[i])
+			{
+				d++;
+			}
+		}
+		return d;	
+	}
+	
+	
+	
+	public void Chuyen(int m)
+	{
+		for(int i = 0; i < 120; i++)
+		{
+			if(A[i] == m)
+			{
+				A[i]++;
+				return;
+			}
+		}
+		
+		
+	}
 	}
