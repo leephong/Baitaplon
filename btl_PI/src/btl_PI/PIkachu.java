@@ -29,10 +29,14 @@ import javax.swing.JOptionPane;
 
 
 
+
+
 import java.util.Random;
 import java.awt.Color;
 
 import javax.swing.JToggleButton;
+
+
 
 
 
@@ -41,8 +45,8 @@ public class PIkachu extends JFrame {
 	
 	public JButton tieptuc;
 	
-	public int A[] = new int [72];
-	public JButton btning[] = new JButton[72];
+	public int[][] A;
+	public JButton btning[][] = new JButton[8][15];
 	
 	public JPanel contentPane;
 	public Timer time;
@@ -157,30 +161,31 @@ public class PIkachu extends JFrame {
 				contentPane.add(maplabel);
 				maplabel.setForeground(Color.RED);
 				
-				for(int i = 0; i <120; i++) 
-				{				
-					btning[i]= new JButton(); 
-					for(int j = 0;j<36 ;j++)
+				for (int i = 1; i < 9; i++)      // dua anh len giao dien
+					for (int j = 1; j < 16; j++) 
 					{
-						String namehinh = "images//h";
-						String b = null;
-						b = b.valueOf(j);
-						namehinh = namehinh.concat(b);
-						namehinh = namehinh.concat(".jpg");
-						if(A[i] ==j)btning[i].setIcon(new  ImageIcon(namehinh));
+						btning[i - 1][j - 1] = new JButton();
+						for (int k = 0; k < 36; k++) {     
+							String namehinh = "images//h";
+							String b = null;
+							b = String.valueOf(k); // chuyen dang so thanh
+													// String
+							namehinh = namehinh.concat(b);
+							namehinh = namehinh.concat(".jpg");
+							if (A[i][j] == k)
+								btning[i - 1][j - 1].setIcon(new ImageIcon(
+										namehinh));
+						}
+						panel.add(btning[i - 1][j - 1]);
+						btning[i - 1][j - 1].addActionListener(this);
 					}
-
-					
-					panel.add(btning[i]);
-					btning[i].addActionListener(this);
-
 				}panel.validate();
-				
-			}//dung ham for
-			
+	// map 1			
+			}
+	// thuat toan tim duong  		
 
-		}
-
+		
+	
 	});
 		 mnFile.add(mntmNewGame);
 		//ket thuc ham action
@@ -195,59 +200,5 @@ public class PIkachu extends JFrame {
 		
 	}
 	
-	public void checkRandom()
-	{
-		//check random
-		
-		for(int i = 0; i < 120;i++)
-		{
-			int r = ran.nextInt(35);
-			A[i] = r;
-			
-		}
-		
-		for(int i = 0; i < 36; i++)
-		{
-				
-			if(DemPT(i) % 2 != 0)
-			{
-				Chuyen(i);
-					
-					
-			}	
-		}
-	}
-	
-	
-	
-	
 
-	public int DemPT(int m)
-	{
-		int d=0;
-		for(int i=0;i<120;i++)
-		{
-			if(m == A[i])
-			{
-				d++;
-			}
-		}
-		return d;	
-	}
-	
-	
-	
-	public void Chuyen(int m)
-	{
-		for(int i = 0; i < 120; i++)
-		{
-			if(A[i] == m)
-			{
-				A[i]++;
-				return;
-			}
-		}
-		
-		
-	}
 	}
