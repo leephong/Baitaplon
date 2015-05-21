@@ -102,7 +102,7 @@ public class PIkachu extends JFrame {
 				if(e.getSource()==huongdan)
 				{ 
 					JOptionPane.showMessageDialog(null,"Nhiệm vụ của bạn rất đơn giản ,chỉ cần tìm hai hình giống nhau "
-							+ "và đường nối giữa chúng gấp khúc không quá 2 lần,clich vào để loại bỏ chúng ");
+							+ "và đường nối giữa chúng gấp khúc không quá 3 lần,click vào để loại bỏ chúng ");
 				}
 			}
 		});
