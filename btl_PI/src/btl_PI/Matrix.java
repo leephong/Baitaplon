@@ -1,5 +1,6 @@
 package btl_PI;
 
+import java.awt.Point;
 import java.util.Random;
 
 /*
@@ -103,6 +104,37 @@ public class Matrix {
 				return false; // khong thuc hien duoc
 		}
 		return true;
+	}
+
+	/*
+	 * TH_2 : Xet duyet cac duong di theo chieu ngang, doc trong pham vi chu
+	 * nhat
+	 */
+	// Xet duyet duong di theo chieu ngang trong pham vi chu nhat
+	/*
+	 *    |                 _________
+	 *    |________                  |
+	 *             |                 |__________
+	 *             |                 
+	 */
+	private boolean checkRectX(Point p1, Point p2) {
+		Point pMinY = p1;
+		Point pMaxY = p2;
+		if (p1.y > p2.y) {
+			pMinY = p2;
+			pMaxY = p1;
+		}
+		for (int i = pMinY.y; i <= pMaxY.y; i++) {
+			if (i > pMinY.y && this.matrix[pMinY.x][i] != -1) {
+				return false;
+			}
+			if ((this.matrix[pMaxY.x][i] == -1 || i == pMaxY.y)
+					&& checkLineY(pMinY.x, pMaxY.x, i)
+					&& checkLineX(i, pMaxY.y, pMaxY.x)) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	
