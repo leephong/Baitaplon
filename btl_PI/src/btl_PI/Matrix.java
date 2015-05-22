@@ -110,13 +110,14 @@ public class Matrix {
 	 * TH_2 : Xet duyet cac duong di theo chieu ngang, doc trong pham vi chu
 	 * nhat
 	 */
-	// Xet duyet duong di theo chieu ngang trong pham vi chu nhat
+	
 	/*
 	 *    |                 _________
 	 *    |________                  |
 	 *             |                 |__________
 	 *             |                 
 	 */
+	// Xet duyet duong di theo chieu ngang trong pham vi chu nhat
 	private boolean checkRectX(Point p1, Point p2) {
 		Point pMinY = p1;
 		Point pMaxY = p2;
@@ -124,6 +125,7 @@ public class Matrix {
 			pMinY = p2;
 			pMaxY = p1;
 		}
+		// Tim cot va x
 		for (int i = pMinY.y; i <= pMaxY.y; i++) {
 			if (i > pMinY.y && this.matrix[pMinY.x][i] != -1) {
 				return false;
@@ -136,6 +138,27 @@ public class Matrix {
 		}
 		return false;
 	}
+	// Xet duyet duonng di theo chieu doc trong pham vi chu nhat
+		private boolean checkRectY(Point p1, Point p2) {
+			Point pMinX = p1;
+			Point pMaxX = p2;
+			if (p1.x > p2.x) {
+				pMinX = p2;
+				pMaxX = p1;
+			}
+			// tim hang va cot y
+			for (int i = pMinX.x; i <= pMaxX.x; i++) {
+				if (i > pMinX.x && this.matrix[i][pMinX.y] != -1) {
+					return false;
+				}
+				if ((this.matrix[i][pMaxX.y] == -1 || i == pMaxX.x)
+						&& checkLineX(pMinX.y, pMaxX.y, i)
+						&& checkLineY(i, pMaxX.x, pMaxX.y)) {
+					return true;
+				}
+			}
+			return false;
+		}
 
 	
 }
