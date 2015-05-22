@@ -160,5 +160,10 @@ public class Matrix {
 			return false;
 		}
 
-	
+		/*
+		 * TH_3 : Xet mo rong theo chieu ngang, chieu doc
+		 */
+
+		// Xet mo rong theo chieu ngang type = 1 ( di ben phai) type = -1 (di ben
+		// trai)
 }
