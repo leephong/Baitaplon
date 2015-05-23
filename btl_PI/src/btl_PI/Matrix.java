@@ -248,6 +248,18 @@ public class Matrix {
 			// Xet duong fi theo chieu doc
 			if (this.checkRectY(p1, p2))
 				return true;
+			// xet du mo rong theo chieu ngang ben phai
+			if (this.checkMoreLineX(p1, p2, 1))
+				return true;
+			// xet su mo rong theo chieu ngang ben trai
+			if (this.checkMoreLineX(p1, p2, -1))
+				return true;
+			// Xet su mo rong theo chieu doc di len tren
+			if (this.checkMoreLineY(p1, p2, 1))
+				return true;
+			// Xet su mo rong theo chieu doc di xuong duoi
+			if (this.checkMoreLineY(p1, p2, -1))
+				return true;
 			return false; // tra ve false neu khong tìm thay duong di
 		}
 }
