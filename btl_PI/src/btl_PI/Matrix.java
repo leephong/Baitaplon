@@ -162,8 +162,43 @@ public class Matrix {
 
 		/*
 		 * TH_3 : Xet mo rong theo chieu ngang, chieu doc
+		 *     ____________               |
+		 *    |                           |     |
+		 *    |_____                      |_____|
 		 */
 
 		// Xet mo rong theo chieu ngang type = 1 ( di ben phai) type = -1 (di ben
 		// trai)
+		private boolean checkMoreLineX(Point p1, Point p2, int type) {
+			Point pMinY = p1, pMaxY = p2;
+			if (p1.y > p2.y) {
+				pMinY = p2;
+				pMaxY = p1;
+			}
+			// Tim hang va y
+			int y = pMaxY.y + type;
+			int _row = pMinY.x;
+			int colFinish = pMaxY.y;
+			if (type == -1) {
+				colFinish = pMinY.y;
+				y = pMinY.y + type;
+				_row = pMaxY.x;
+			}
+
+			// Tim cot ket thuc cua hang x
+
+			// check more
+			if ((this.matrix[_row][colFinish] == -1 || pMinY.y == pMaxY.y)
+					&& checkLineX(pMinY.y, pMaxY.y, _row)) {
+				while (this.matrix[pMinY.x][y] == -1
+						&& this.matrix[pMaxY.x][y] == -1) {
+					if (checkLineY(pMinY.x, pMaxY.x, y)) {
+						return true;
+					}
+					y += type;
+				}
+			}
+			return false;
+		}
+
 }
