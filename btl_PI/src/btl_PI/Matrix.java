@@ -242,5 +242,12 @@ public class Matrix {
 				if (this.checkLineY(p1.x, p2.x, p1.y))
 					return true;
 			}
+			// Xet duong di theo chieu ngang
+			if (this.checkRectX(p1, p2))
+				return true;
+			// Xet duong fi theo chieu doc
+			if (this.checkRectY(p1, p2))
+				return true;
+			return false; // tra ve false neu khong tìm thay duong di
 		}
 }
