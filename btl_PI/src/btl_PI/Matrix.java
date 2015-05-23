@@ -228,4 +228,19 @@ public class Matrix {
 			}
 			return false;
 		}
+		/*
+		 * Ham xu ly
+		 */
+		public boolean checkTwoPoint(Point p1, Point p2) {
+			// Kiem tra voi hang x , cot y1,y2
+			if (p1.x == p2.x) {
+				if (this.checkLineX(p1.y, p2.y, p1.x))
+					return true;
+			}
+			// Kiem tra voi cot y , hang x1,hang x2
+			if (p1.y == p2.y) {
+				if (this.checkLineY(p1.x, p2.x, p1.y))
+					return true;
+			}
+		}
 }
