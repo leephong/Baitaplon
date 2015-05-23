@@ -200,5 +200,32 @@ public class Matrix {
 			}
 			return false;
 		}
-
+		// Xet mo rong theo chieu doc type = 1 ( di len tren) type = -1 (di xuong
+				// duoi)
+		private boolean checkMoreLineY(Point p1, Point p2, int type) {
+			Point pMinX = p1, pMaxX = p2;
+			if (p1.x > p2.x) {
+				pMinX = p2;
+				pMaxX = p1;
+			}
+			int x = pMaxX.x + type;
+			int _col = pMinX.y;
+			int rowFinish = pMaxX.x;
+			if (type == -1) {
+				rowFinish = pMinX.x;
+				x = pMinX.x + type;
+				_col = pMaxX.y;
+			}
+			if ((this.matrix[rowFinish][_col] == -1 || pMinX.x == pMaxX.x)
+					&& checkLineY(pMinX.x, pMaxX.x, _col)) {
+				while (this.matrix[x][pMinX.y] == -1
+						&& this.matrix[x][pMaxX.y] == -1) {
+					if (checkLineX(pMinX.y, pMaxX.y, x)) {
+						return true;
+					}
+					x += type;
+				}
+			}
+			return false;
+		}
 }
