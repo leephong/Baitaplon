@@ -31,6 +31,10 @@ import javax.swing.JOptionPane;
 import java.util.Random;
 import java.awt.Color;
 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.AudioSystem;
+
 import javax.swing.JToggleButton;
 
 public class PIkachu extends JFrame {
@@ -44,7 +48,7 @@ public class PIkachu extends JFrame {
 
 	public JPanel contentPane;
 	public Timer time;
-
+  in
 	/**
 	 * Launch the application.
 	 */
@@ -57,7 +61,6 @@ public class PIkachu extends JFrame {
 	public JMenuItem huongdan = new JMenuItem(" Contruct");
 	public int newgame = 0;
 	public long score = 0;
-
 	public JLabel scorelabel = new JLabel("Score = " + score);
 	public JLabel timelabel = new JLabel("Time = " + bodem);
 	public JLabel maplabel = new JLabel("Map = " + score);
@@ -83,7 +86,6 @@ public class PIkachu extends JFrame {
 		JMenuBar menuBar = new JMenuBar();
 		menuBar.setBounds(0, 0, 1024, 20);
 		contentPane.add(menuBar);
-
 		JMenu mnFile = new JMenu("File");
 		menuBar.add(mnFile);
 
@@ -141,6 +143,7 @@ public class PIkachu extends JFrame {
 					timelabel.setBounds(200, 32, 98, 14);
 					contentPane.add(timelabel);
 					timelabel.setForeground(Color.GREEN);
+			         
 
 					maplabel.setBounds(400, 32, 98, 14);
 					contentPane.add(maplabel);
@@ -272,6 +275,7 @@ public class PIkachu extends JFrame {
 		});
 
 		mnFile.add(mntmExitGame);
+		
 
 	}
 }
