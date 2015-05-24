@@ -75,7 +75,7 @@ public class PIkachu extends JFrame {
 		setResizable(true);
 		setTitle("PIkachu");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 80, 1024, 640);// vi tri va thay doi kich thuoc
+		setBounds(80, 50, 1024, 680);// vi tri va thay doi kich thuoc
 		contentPane = new ImagePanel(new ImageIcon("images\\bg.jpg").getImage());
 		setContentPane(contentPane);
 
@@ -113,7 +113,7 @@ public class PIkachu extends JFrame {
 					maplabel.setText("Map = " + (map + 1));
 					matrix.setMatrixmatrix();
 					bodem = 500;
-					// checkRandom();
+					//A = Matrix.getMatrix(); // gan ma tran vao A
 					panel.removeAll();
 					gamemap = 0;
 					ActionListener aTime = new ActionListener() {
@@ -130,12 +130,12 @@ public class PIkachu extends JFrame {
 					};
 					time = new Timer(1000, aTime);
 					time.start();
-					panel.setBounds(100, 50, 795, 520);
+					panel.setBounds(100, 70, 750, 540);
 					contentPane.add(panel);
 					panel.setLayout(new GridLayout(8, 15, 0, 0));
 					panel.setOpaque(false);
 
-					scorelabel.setBounds(10, 32, 98, 14);
+					scorelabel.setBounds(50, 32, 98, 14);
 					contentPane.add(scorelabel);
 					scorelabel.setForeground(Color.WHITE);
 
