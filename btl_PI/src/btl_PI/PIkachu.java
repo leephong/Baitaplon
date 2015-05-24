@@ -28,13 +28,13 @@ import javax.swing.JMenuItem;
 import javax.swing.JMenuBar;
 import javax.swing.JOptionPane;
 
+import java.io.File;
 import java.util.Random;
 import java.awt.Color;
 
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.AudioSystem;
-
 import javax.swing.JToggleButton;
 
 public class PIkachu extends JFrame {
@@ -278,5 +278,20 @@ public class PIkachu extends JFrame {
 		
 
 	}
+	public void playSound(String soundName)
+	 {
+	   try 
+	   {
+	    AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+	    Clip clip = AudioSystem.getClip( );
+	    clip.open(audioInputStream);
+	    clip.start( );
+	   }
+	   catch(Exception ex)
+	   {
+	     System.out.println("Error with playing sound.");
+	     ex.printStackTrace( );
+	   }
+	 }
 }
 //chinh
