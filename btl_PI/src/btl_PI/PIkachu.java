@@ -95,6 +95,7 @@ public class PIkachu extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 
 				if (e.getSource() == huongdan) {
+					playSound("musics\\buttonsound.wav");
 					JOptionPane.showMessageDialog(null,"Nhiá»‡m vá»¥ cá»§a báº¡n ráº¥t Ä‘Æ¡n giáº£n ,chá»‰ cáº§n tÃ¬m hai hÃ¬nh giá»‘ng nhau "
 											+ "vÃ  Ä‘Æ°á»�ng ná»‘i giá»¯a chÃºng gáº¥p khÃºc khÃ´ng quÃ¡ 3 láº§n,click vÃ o Ä‘á»ƒ loáº¡i bá»� chÃºng ");
 				}
@@ -107,10 +108,11 @@ public class PIkachu extends JFrame {
 			public void actionPerformed(ActionEvent e) {
                
 				if (e.getSource() == mntmNewGame) {
-					playSound("musics\\music.mp3");
-
+					
 					score = 0;
 					map = 0;
+					playSound("musics\\buttonsound.wav");
+					playSound("musics\\music.wav");
 					scorelabel.setText("Score = " + score);
 					maplabel.setText("Map = " + (map + 1));
 					matrix.setMatrixmatrix();
@@ -224,7 +226,7 @@ public class PIkachu extends JFrame {
 											maplabel.setText("Map = "+ (map + 1));
 											bodem = 500 - (map * 20);
 											gamemap = 0;
-											playSound("musics\\music.mp3");
+											playSound("musics\\music.wav");
 											panel.removeAll();
 											matrix.setMatrixmatrix();
 											A = matrix.getMatrix();
@@ -276,6 +278,7 @@ public class PIkachu extends JFrame {
 		final JMenuItem mntmExitGame = new JMenuItem(" Exit");
 		mntmExitGame.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				playSound("musics\\buttonsound.wav");
 				System.exit(0);
 			}
 		});
