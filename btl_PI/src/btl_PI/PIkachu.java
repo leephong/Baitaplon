@@ -28,13 +28,13 @@ import javax.swing.JMenuItem;
 import javax.swing.JMenuBar;
 import javax.swing.JOptionPane;
 
+import java.io.File;
 import java.util.Random;
 import java.awt.Color;
 
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.AudioSystem;
-
 import javax.swing.JToggleButton;
 
 public class PIkachu extends JFrame {
@@ -48,7 +48,7 @@ public class PIkachu extends JFrame {
 
 	public JPanel contentPane;
 	public Timer time;
-  in
+
 	/**
 	 * Launch the application.
 	 */
@@ -95,8 +95,8 @@ public class PIkachu extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 
 				if (e.getSource() == huongdan) {
-					JOptionPane.showMessageDialog(null,"Nhiá»‡m vá»¥ cá»§a báº¡n ráº¥t Ä‘Æ¡n giáº£n ,chá»‰ cáº§n tÃ¬m hai hÃ¬nh giá»‘ng nhau "
-											+ "vÃ  Ä‘Æ°á»�ng ná»‘i giá»¯a chÃºng gáº¥p khÃºc khÃ´ng quÃ¡ 3 láº§n,click vÃ o Ä‘á»ƒ loáº¡i bá»� chÃºng ");
+					JOptionPane.showMessageDialog(null,"Nhiệm vụ của bạn rất đơn giản ,chỉ cần tìm hai hình giống nhau "
+							+ "và đường nối giữa chúng gấp khúc không quá 2 lần,clich vào để loại bỏ chúng ");
 				}
 			}
 		});
@@ -107,7 +107,8 @@ public class PIkachu extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 
 				if (e.getSource() == mntmNewGame) {
-
+					
+					 playSound("music\\a better day.wav");
 					score = 0;
 					map = 0;
 					scorelabel.setText("Score = " + score);
@@ -278,5 +279,19 @@ public class PIkachu extends JFrame {
 		
 
 	}
+	 private void playSound(String soundName) {
+		 // TODO Auto-generated method stub
+		 try
+		 {
+		 AudioInputStream audioInputStream =  AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile( ));
+		 Clip clip = AudioSystem.getClip( );
+		 clip.open(audioInputStream);
+		 clip.start( );
+		 }
+		 catch(Exception ex)
+		 {
+		 System.out.println("Error with playing sound.");
+		 ex.printStackTrace( );
+		 }
+		 }
 }
-//chinh
