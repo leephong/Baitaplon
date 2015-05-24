@@ -106,12 +106,10 @@ public class PIkachu extends JFrame {
 
 		mntmNewGame.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-               
 				if (e.getSource() == mntmNewGame) {
-					
 					score = 0;
 					map = 0;
-					playSound("musics\\buttonsound.wav");
+					
 					playSound("musics\\music.wav");
 					scorelabel.setText("Score = " + score);
 					maplabel.setText("Map = " + (map + 1));
@@ -125,6 +123,7 @@ public class PIkachu extends JFrame {
 							--bodem;
 							timelabel.setText("Time = " + bodem);
 							if (bodem == 0) {
+				                playSound("musics\\button1.wav");
 								JOptionPane.showMessageDialog(null,"Het gio ban thua roi");
 								time.stop();
 								panel.removeAll();
@@ -214,6 +213,7 @@ public class PIkachu extends JFrame {
 											map = map + 1;
 											if (map == 3) {
 												time.stop();
+								                playSound("musics\\buttonsound.wav");
 												JOptionPane.showMessageDialog(null,"WINER NEW SCORE "+ score);
 												panel.removeAll();
 												score = 0;
