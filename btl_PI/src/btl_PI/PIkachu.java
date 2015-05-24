@@ -33,7 +33,6 @@ import java.awt.Color;
 
 import javax.swing.JToggleButton;
 
-@SuppressWarnings({ "serial", "unused" })
 public class PIkachu extends JFrame {
 
 	public JButton tieptuc;
@@ -113,7 +112,7 @@ public class PIkachu extends JFrame {
 					maplabel.setText("Map = " + (map + 1));
 					matrix.setMatrixmatrix();
 					bodem = 500;
-					//A = Matrix.getMatrix(); // gan ma tran vao A
+					A = matrix.getMatrix(); // gan ma tran vao A
 					panel.removeAll();
 					gamemap = 0;
 					ActionListener aTime = new ActionListener() {
@@ -200,10 +199,10 @@ public class PIkachu extends JFrame {
 										b1.setVisible(false);
 										b1 = null;
 										b2 = null;
-										score = score + 500;
+										score = score + 10;
 										scorelabel.setText("Score = " + score);
 										gamemap = gamemap + 1;
-										if (gamemap == 60) {
+										if (gamemap == 10) {
 											map = map + 1;
 											if (map == 3) {
 												time.stop();
@@ -214,7 +213,7 @@ public class PIkachu extends JFrame {
 												gamemap = 0;
 												return;
 											}
-											score = score + 500 + (10 * bodem);
+											score = score + (10 * gamemap);
 											scorelabel.setText("Score = "+ score);
 											maplabel.setText("Map = "+ (map + 1));
 											bodem = 500 - (map * 20);
@@ -223,8 +222,9 @@ public class PIkachu extends JFrame {
 											matrix.setMatrixmatrix();
 											A = matrix.getMatrix();
 											for (int i1 = 1; i1 < 9; i1++)
-												for (int j1 = 1; j1 < 16; j1++) {
-													btning[i1][j1] = new JButton();
+												for (int j1 = 1; j1 < 16; j1++)
+												{
+													btning[i1-1][j1-1] = new JButton();
 													for (int k = 0; k < 36; k++) {
 														String namehinh = "images//h";
 														String b = null;
