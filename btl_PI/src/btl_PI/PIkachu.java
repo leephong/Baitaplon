@@ -105,9 +105,9 @@ public class PIkachu extends JFrame {
 
 		mntmNewGame.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
+               
 				if (e.getSource() == mntmNewGame) {
-
+					playSound("musics\\sleepwav.wav");
 					score = 0;
 					map = 0;
 					scorelabel.setText("Score = " + score);
@@ -221,6 +221,7 @@ public class PIkachu extends JFrame {
 											maplabel.setText("Map = "+ (map + 1));
 											bodem = 500 - (map * 20);
 											gamemap = 0;
+											playSound("musics\\sleepwav.wav");
 											panel.removeAll();
 											matrix.setMatrixmatrix();
 											A = matrix.getMatrix();
