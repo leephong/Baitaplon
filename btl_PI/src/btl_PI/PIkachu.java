@@ -105,10 +105,11 @@ public class PIkachu extends JFrame {
 
 		mntmNewGame.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
-				if (e.getSource() == mntmNewGame) {
-					
+               
+				if (e.getSource() == mntmNewGame) {					
 					 playSound("music\\a better day.wav");
+
+
 					score = 0;
 					map = 0;
 					scorelabel.setText("Score = " + score);
@@ -185,6 +186,7 @@ public class PIkachu extends JFrame {
 								point2 = new Point(i, j);
 								if (A[point1.x][point1.y] == A[point2.x][point2.y]) {
 									if (b1 == b2) {
+										playSound("musics\\burp.wav");
 										flag = 0;
 										b1.setBorder(null);
 										b2.setBorder(null);
@@ -194,6 +196,7 @@ public class PIkachu extends JFrame {
 
 									}
 									if (matrix.checkTwoPoint(point1, point2)) {
+										playSound("musics\\buttonsound.wav");
 										flag = 0;
 										A[point1.x][point1.y] = -1;
 										A[point2.x][point2.y] = -1;
@@ -222,6 +225,7 @@ public class PIkachu extends JFrame {
 											maplabel.setText("Map = "+ (map + 1));
 											bodem = 500 - (map * 20);
 											gamemap = 0;
+											playSound("musics\\music.wav");
 											panel.removeAll();
 											matrix.setMatrixmatrix();
 											A = matrix.getMatrix();
@@ -245,6 +249,7 @@ public class PIkachu extends JFrame {
 										}
 										return;
 									} else {
+										playSound("musics\\burp.wav");
 										b1.setBorder(null);
 										b2.setBorder(null);
 										b1 = null;
@@ -253,6 +258,7 @@ public class PIkachu extends JFrame {
 										return;
 									}
 								} else {
+									playSound("musics\\burp.wav");
 									flag = 0;
 									b1.setBorder(null);
 									b2.setBorder(null);
@@ -279,19 +285,21 @@ public class PIkachu extends JFrame {
 		
 
 	}
-	 private void playSound(String soundName) {
-		 // TODO Auto-generated method stub
-		 try
-		 {
-		 AudioInputStream audioInputStream =  AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile( ));
-		 Clip clip = AudioSystem.getClip( );
-		 clip.open(audioInputStream);
-		 clip.start( );
-		 }
-		 catch(Exception ex)
-		 {
-		 System.out.println("Error with playing sound.");
-		 ex.printStackTrace( );
-		 }
-		 }
+
+	public void playSound(String soundName)
+	 {
+	   try 
+	   {
+	    AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+	    Clip clip = AudioSystem.getClip( );
+	    clip.open(audioInputStream);
+	    clip.start( );
+	   }
+	   catch(Exception ex)
+	   {
+	     System.out.println("Error with playing sound.");
+	     ex.printStackTrace( );
+	   }
+	 }
+
 }
