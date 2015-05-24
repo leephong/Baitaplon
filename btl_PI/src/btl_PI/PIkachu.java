@@ -93,8 +93,8 @@ public class PIkachu extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 
 				if (e.getSource() == huongdan) {
-					JOptionPane.showMessageDialog(null,"Nhiệm vụ của bạn rất đơn giản ,chỉ cần tìm hai hình giống nhau "
-											+ "và đường nối giữa chúng gấp khúc không quá 3 lần,click vào để loại bỏ chúng ");
+					JOptionPane.showMessageDialog(null,"Nhiá»‡m vá»¥ cá»§a báº¡n ráº¥t Ä‘Æ¡n giáº£n ,chá»‰ cáº§n tÃ¬m hai hÃ¬nh giá»‘ng nhau "
+											+ "vÃ  Ä‘Æ°á»�ng ná»‘i giá»¯a chÃºng gáº¥p khÃºc khÃ´ng quÃ¡ 3 láº§n,click vÃ o Ä‘á»ƒ loáº¡i bá»� chÃºng ");
 				}
 			}
 		});
@@ -111,7 +111,7 @@ public class PIkachu extends JFrame {
 					scorelabel.setText("Score = " + score);
 					maplabel.setText("Map = " + (map + 1));
 					matrix.setMatrixmatrix();
-					bodem = 500;
+					bodem = 500; 
 					A = matrix.getMatrix(); // gan ma tran vao A
 					panel.removeAll();
 					gamemap = 0;
@@ -275,3 +275,4 @@ public class PIkachu extends JFrame {
 
 	}
 }
+//chinh
