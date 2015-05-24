@@ -107,7 +107,8 @@ public class PIkachu extends JFrame {
 			public void actionPerformed(ActionEvent e) {
                
 				if (e.getSource() == mntmNewGame) {
-					playSound("musics\\music.wav");
+					playSound("musics\\music.mp3");
+
 					score = 0;
 					map = 0;
 					scorelabel.setText("Score = " + score);
@@ -184,7 +185,7 @@ public class PIkachu extends JFrame {
 								point2 = new Point(i, j);
 								if (A[point1.x][point1.y] == A[point2.x][point2.y]) {
 									if (b1 == b2) {
-										playSound("musics\\burp.wav");
+										playSound("musics\\button1.wav");
 										flag = 0;
 										b1.setBorder(null);
 										b2.setBorder(null);
@@ -223,7 +224,7 @@ public class PIkachu extends JFrame {
 											maplabel.setText("Map = "+ (map + 1));
 											bodem = 500 - (map * 20);
 											gamemap = 0;
-											playSound("musics\\music.wav");
+											playSound("musics\\music.mp3");
 											panel.removeAll();
 											matrix.setMatrixmatrix();
 											A = matrix.getMatrix();
@@ -247,7 +248,7 @@ public class PIkachu extends JFrame {
 										}
 										return;
 									} else {
-										playSound("musics\\burp.wav");
+										playSound("musics\\button1.wav");
 										b1.setBorder(null);
 										b2.setBorder(null);
 										b1 = null;
@@ -256,7 +257,7 @@ public class PIkachu extends JFrame {
 										return;
 									}
 								} else {
-									playSound("musics\\burp.wav");
+									playSound("musics\\button1.wav");
 									flag = 0;
 									b1.setBorder(null);
 									b2.setBorder(null);
