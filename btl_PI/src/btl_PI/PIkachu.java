@@ -269,8 +269,9 @@ public class PIkachu extends JFrame {
 							}
 						}
 					}
-
+				//playSound("music\\Boi Vi Anh Yeu Em.wav");
 			}
+			
 		});
 		mnFile.add(mntmNewGame);
 		// ket thuc ham action
