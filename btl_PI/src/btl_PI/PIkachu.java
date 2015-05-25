@@ -94,14 +94,11 @@ public class PIkachu extends JFrame {
 		huongdan.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				if (e.getSource() == huongdan) {
-					
+				if (e.getSource() == huongdan) {					
 					playSound("musics\\buttonsound.wav");
 					JOptionPane.showMessageDialog(null,"Nhiệm vụ của bạn rất đơn giản ,chỉ cần tìm hai hình giống nhau "
 							+ "và đường nối giữa chúng gấp khúc không quá 2 lần,clich vào để loại bỏ chúng ");
 
-					
-					
 				}
 			}
 		});
@@ -111,11 +108,10 @@ public class PIkachu extends JFrame {
 		mntmNewGame.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
+
                
 				if (e.getSource() == mntmNewGame) {					
 					 playSound("music\\a better day.wav");
-
-
 
 				if (e.getSource() == mntmNewGame) {
 
@@ -202,7 +198,6 @@ public class PIkachu extends JFrame {
 										playSound("musics\\burp.wav");
 
 										playSound("musics\\button1.wav");
-
 										flag = 0;
 										b1.setBorder(null);
 										b2.setBorder(null);
@@ -267,10 +262,10 @@ public class PIkachu extends JFrame {
 										return;
 									} else {
 
+
 										playSound("musics\\burp.wav");
 
 										playSound("musics\\button1.wav");
-
 										b1.setBorder(null);
 										b2.setBorder(null);
 										b1 = null;
@@ -279,6 +274,7 @@ public class PIkachu extends JFrame {
 										return;
 									}
 								} else {
+
 
 									playSound("musics\\burp.wav");
 
@@ -312,7 +308,6 @@ public class PIkachu extends JFrame {
 		
 
 	}
-
 
 	public void playSound(String soundName)
 	 {
