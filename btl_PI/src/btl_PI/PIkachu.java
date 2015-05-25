@@ -138,16 +138,16 @@ public class PIkachu extends JFrame {
 					panel.setLayout(new GridLayout(8, 15, 0, 0));
 					panel.setOpaque(false);
 
-					scorelabel.setBounds(50, 32, 98, 14);
+					scorelabel.setBounds(50, 30, 100, 15);
 					contentPane.add(scorelabel);
-					scorelabel.setForeground(Color.WHITE);
+					scorelabel.setForeground(Color.RED);
 
-					timelabel.setBounds(200, 32, 98, 14);
+					timelabel.setBounds(200, 30, 100, 15);
 					contentPane.add(timelabel);
-					timelabel.setForeground(Color.GREEN);
+					timelabel.setForeground(Color.RED);
 			         
 
-					maplabel.setBounds(400, 32, 98, 14);
+					maplabel.setBounds(400, 30, 100, 15);
 					contentPane.add(maplabel);
 					maplabel.setForeground(Color.RED);
 
@@ -211,7 +211,7 @@ public class PIkachu extends JFrame {
 										gamemap = gamemap + 1;
 										if (gamemap == 10) {
 											map = map + 1;
-											if (map == 3) {
+											if (map == 2) {
 												time.stop();
 												JOptionPane.showMessageDialog(null,"WINER NEW SCORE "+ score);
 												panel.removeAll();
@@ -223,7 +223,7 @@ public class PIkachu extends JFrame {
 											score = score + (10 * gamemap);
 											scorelabel.setText("Score = "+ score);
 											maplabel.setText("Map = "+ (map + 1));
-											bodem = 500 - (map * 20);
+											bodem = 500 - (map * 30);
 											gamemap = 0;
 											playSound("musics\\music.wav");
 											panel.removeAll();
