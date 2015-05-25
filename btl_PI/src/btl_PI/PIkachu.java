@@ -48,7 +48,7 @@ public class PIkachu extends JFrame {
 
 	public JPanel contentPane;
 	public Timer time;
-  in
+
 	/**
 	 * Launch the application.
 	 */
@@ -94,10 +94,11 @@ public class PIkachu extends JFrame {
 		huongdan.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				if (e.getSource() == huongdan) {
+				if (e.getSource() == huongdan) {					
 					playSound("musics\\buttonsound.wav");
-					JOptionPane.showMessageDialog(null,"Nhiá»‡m vá»¥ cá»§a báº¡n ráº¥t Ä‘Æ¡n giáº£n ,chá»‰ cáº§n tÃ¬m hai hÃ¬nh giá»‘ng nhau "
-											+ "vÃ  Ä‘Æ°á»�ng ná»‘i giá»¯a chÃºng gáº¥p khÃºc khÃ´ng quÃ¡ 3 láº§n,click vÃ o Ä‘á»ƒ loáº¡i bá»� chÃºng ");
+					JOptionPane.showMessageDialog(null,"Nhiệm vụ của bạn rất đơn giản ,chỉ cần tìm hai hình giống nhau "
+							+ "và đường nối giữa chúng gấp khúc không quá 2 lần,clich vào để loại bỏ chúng ");
+
 				}
 			}
 		});
@@ -106,7 +107,14 @@ public class PIkachu extends JFrame {
 
 		mntmNewGame.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+
+
+               
+				if (e.getSource() == mntmNewGame) {					
+					 playSound("music\\a better day.wav");
+
 				if (e.getSource() == mntmNewGame) {
+
 					score = 0;
 					map = 0;
 					
@@ -138,16 +146,16 @@ public class PIkachu extends JFrame {
 					panel.setLayout(new GridLayout(8, 15, 0, 0));
 					panel.setOpaque(false);
 
-					scorelabel.setBounds(50, 32, 98, 14);
+					scorelabel.setBounds(50, 30, 100, 15);
 					contentPane.add(scorelabel);
-					scorelabel.setForeground(Color.WHITE);
+					scorelabel.setForeground(Color.RED);
 
-					timelabel.setBounds(200, 32, 98, 14);
+					timelabel.setBounds(200, 30, 100, 15);
 					contentPane.add(timelabel);
-					timelabel.setForeground(Color.GREEN);
+					timelabel.setForeground(Color.RED);
 			         
 
-					maplabel.setBounds(400, 32, 98, 14);
+					maplabel.setBounds(400, 30, 100, 15);
 					contentPane.add(maplabel);
 					maplabel.setForeground(Color.RED);
 
@@ -186,6 +194,9 @@ public class PIkachu extends JFrame {
 								point2 = new Point(i, j);
 								if (A[point1.x][point1.y] == A[point2.x][point2.y]) {
 									if (b1 == b2) {
+
+										playSound("musics\\burp.wav");
+
 										playSound("musics\\button1.wav");
 										flag = 0;
 										b1.setBorder(null);
@@ -211,7 +222,7 @@ public class PIkachu extends JFrame {
 										gamemap = gamemap + 1;
 										if (gamemap == 10) {
 											map = map + 1;
-											if (map == 3) {
+											if (map == 2) {
 												time.stop();
 								                playSound("musics\\buttonsound.wav");
 												JOptionPane.showMessageDialog(null,"WINER NEW SCORE "+ score);
@@ -224,7 +235,7 @@ public class PIkachu extends JFrame {
 											score = score + (10 * gamemap);
 											scorelabel.setText("Score = "+ score);
 											maplabel.setText("Map = "+ (map + 1));
-											bodem = 500 - (map * 20);
+											bodem = 500 - (map * 30);
 											gamemap = 0;
 											playSound("musics\\music.wav");
 											panel.removeAll();
@@ -250,6 +261,10 @@ public class PIkachu extends JFrame {
 										}
 										return;
 									} else {
+
+
+										playSound("musics\\burp.wav");
+
 										playSound("musics\\button1.wav");
 										b1.setBorder(null);
 										b2.setBorder(null);
@@ -259,7 +274,12 @@ public class PIkachu extends JFrame {
 										return;
 									}
 								} else {
+
+
+									playSound("musics\\burp.wav");
+
 									playSound("musics\\button1.wav");
+
 									flag = 0;
 									b1.setBorder(null);
 									b2.setBorder(null);
@@ -270,7 +290,8 @@ public class PIkachu extends JFrame {
 							}
 						}
 					}
-
+				//playSound("music\\Boi Vi Anh Yeu Em.wav");
+			}
 			}
 		});
 		mnFile.add(mntmNewGame);
@@ -287,6 +308,7 @@ public class PIkachu extends JFrame {
 		
 
 	}
+
 	public void playSound(String soundName)
 	 {
 	   try 
@@ -302,5 +324,5 @@ public class PIkachu extends JFrame {
 	     ex.printStackTrace( );
 	   }
 	 }
+
 }
-//chinh
