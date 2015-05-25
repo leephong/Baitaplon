@@ -95,8 +95,13 @@ public class PIkachu extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 
 				if (e.getSource() == huongdan) {
+					
+					playSound("musics\\buttonsound.wav");
 					JOptionPane.showMessageDialog(null,"Nhiệm vụ của bạn rất đơn giản ,chỉ cần tìm hai hình giống nhau "
 							+ "và đường nối giữa chúng gấp khúc không quá 2 lần,clich vào để loại bỏ chúng ");
+
+					
+					
 				}
 			}
 		});
@@ -105,13 +110,19 @@ public class PIkachu extends JFrame {
 
 		mntmNewGame.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+
                
 				if (e.getSource() == mntmNewGame) {					
 					 playSound("music\\a better day.wav");
 
 
+
+				if (e.getSource() == mntmNewGame) {
+
 					score = 0;
 					map = 0;
+					
+					playSound("musics\\music.wav");
 					scorelabel.setText("Score = " + score);
 					maplabel.setText("Map = " + (map + 1));
 					matrix.setMatrixmatrix();
@@ -124,6 +135,7 @@ public class PIkachu extends JFrame {
 							--bodem;
 							timelabel.setText("Time = " + bodem);
 							if (bodem == 0) {
+				                playSound("musics\\button1.wav");
 								JOptionPane.showMessageDialog(null,"Het gio ban thua roi");
 								time.stop();
 								panel.removeAll();
@@ -186,7 +198,11 @@ public class PIkachu extends JFrame {
 								point2 = new Point(i, j);
 								if (A[point1.x][point1.y] == A[point2.x][point2.y]) {
 									if (b1 == b2) {
+
 										playSound("musics\\burp.wav");
+
+										playSound("musics\\button1.wav");
+
 										flag = 0;
 										b1.setBorder(null);
 										b2.setBorder(null);
@@ -213,6 +229,7 @@ public class PIkachu extends JFrame {
 											map = map + 1;
 											if (map == 2) {
 												time.stop();
+								                playSound("musics\\buttonsound.wav");
 												JOptionPane.showMessageDialog(null,"WINER NEW SCORE "+ score);
 												panel.removeAll();
 												score = 0;
@@ -249,7 +266,11 @@ public class PIkachu extends JFrame {
 										}
 										return;
 									} else {
+
 										playSound("musics\\burp.wav");
+
+										playSound("musics\\button1.wav");
+
 										b1.setBorder(null);
 										b2.setBorder(null);
 										b1 = null;
@@ -258,7 +279,11 @@ public class PIkachu extends JFrame {
 										return;
 									}
 								} else {
+
 									playSound("musics\\burp.wav");
+
+									playSound("musics\\button1.wav");
+
 									flag = 0;
 									b1.setBorder(null);
 									b2.setBorder(null);
@@ -271,13 +296,14 @@ public class PIkachu extends JFrame {
 					}
 				//playSound("music\\Boi Vi Anh Yeu Em.wav");
 			}
-			
+			}
 		});
 		mnFile.add(mntmNewGame);
 		// ket thuc ham action
 		final JMenuItem mntmExitGame = new JMenuItem(" Exit");
 		mntmExitGame.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				playSound("musics\\buttonsound.wav");
 				System.exit(0);
 			}
 		});
@@ -286,6 +312,7 @@ public class PIkachu extends JFrame {
 		
 
 	}
+
 
 	public void playSound(String soundName)
 	 {
